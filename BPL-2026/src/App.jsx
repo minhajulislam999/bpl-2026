@@ -27,8 +27,8 @@ function App() {
 
           </div>
           <div>
-            <button onClick={() => setToggle(true)} className="btn  border-radius border-r-none">Available</button>
-            <button onClick={() => setToggle(false)} className="btn btn-secondary border-radius">Selected</button>
+            <button onClick={() => setToggle(true)} className={` btn  border-radius border-r-none ${toggle === true ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}>Available</button>
+            <button onClick={() => setToggle(false)} className={`btn  border-radius border-r-none ${toggle === false ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}>Selected</button>
 
           </div>
         </div>
