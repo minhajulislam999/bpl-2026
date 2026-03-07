@@ -1,0 +1,110 @@
+[
+  {
+    "id": 1,
+    "name": "Shakib Al Hasan",
+    "picture": "https://i.ibb.co.com/nqyJfpvz/bangladeshs-shakib-al-hasan-after-the-game-against-south-africaduring-the-icc-cricket-world-cup-grou.jpg",
+    "country": "Bangladesh",
+    "rating": 95,
+    "batting": "Left-Hand-Bat",
+    "price": 90000
+  },
+  {
+    "id": 2,
+    "name": "Tamim Iqbal",
+    "picture": "https://i.ibb.co.com/prvTgqr4/cricket-a-head-and-shoulders-portrait-of-the-bangladesh-cricketer-EAH8-M0.jpg",
+    "country": "Bangladesh",
+    "rating": 90,
+    "batting": "Left-Hand-Bat",
+    "price": 85000
+  },
+  {
+    "id": 3,
+    "name": "Babar Azam",
+    "picture": "https://i.ibb.co.com/5XJmHyKX/pakistans-babar-azam-W0-Y1-D2.jpg",
+    "country": "Pakistan",
+    "rating": 94,
+    "batting": "Right-Hand-Bat",
+    "price": 95000
+  },
+  {
+    "id": 4,
+    "name": "David Warner",
+    "picture": "https://i.ibb.co.com/Vpb5KrXR/the-hundred-london-spirit-vs-trent-rockets-14082025-lords-london-3-CFFG62.jpg",
+    "country": "Australia",
+    "rating": 93,
+    "batting": "Left-Hand-Bat",
+    "price": 92000
+  },
+  {
+    "id": 5,
+    "name": "Jos Buttler",
+    "picture": "https://i.ibb.co.com/0VM3gzw0/file-photo-dated-07092025-of-jos-buttler-steve-harmison-believes-the-countrys-record-t20-run-scorer.jpg",
+    "country": "England",
+    "rating": 91,
+    "batting": "Right-Hand-Bat",
+    "price": 88000
+  },
+  {
+    "id": 6,
+    "name": "Rashid Khan",
+    "picture": "https://i.ibb.co.com/YB7mFrVB/afghanistans-rashid-khan-reacts-during-a-practice-session-at-pallekele-international-cricket-stadium.jpg",
+    "country": "Afghanistan",
+    "rating": 92,
+    "batting": "Right-Hand-Bat",
+    "price": 87000
+  },
+  {
+    "id": 7,
+    "name": "Virat Kohli",
+    "picture": "https://i.ibb.co.com/zVrfVmcg/bangkokthailand-november-12019-virat-kohli-wax-figure-display-at-madame-tussauds-museumsiam-discover.jpg",
+    "country": "India",
+    "rating": 96,
+    "batting": "Right-Hand-Bat",
+    "price": 100000
+  },
+  {
+    "id": 8,
+    "name": "Ben Stokes",
+    "picture": "https://i.ibb.co.com/Qvjq25zN/ben-stokes-warms-up-to-lead-england-cricket-team-against-pakistan-11-may-2019-2-ANPTXR.jpg",
+    "country": "England",
+    "rating": 89,
+    "batting": "Left-Hand-Bat",
+    "price": 86000
+  },
+  {
+    "id": 9,
+    "name": "Kane Williamson",
+    "picture": "https://i.ibb.co.com/ynxGNDQG/kane-williamson-of-gloucestershire-essex-ccc-vs-gloucestershire-ccc-GRG8-RK.jpg",
+    "country": "New Zealand",
+    "rating": 90,
+    "batting": "Right-Hand-Bat",
+    "price": 87000
+  },
+  {
+    "id": 10,
+    "name": "Quinton de Kock",
+    "picture": "https://i.ibb.co.com/tp7h91WZ/london-england-august-01-blake-cullen-of-london-spirit-celebrates-the-catch-of-quinton-de-kock-of-so.jpg",
+    "country": "South Africa",
+    "rating": 88,
+    "batting": "Left-Hand-Bat",
+    "price": 83000
+  },
+  {
+    "id": 11,
+    "name": "Andre Russell",
+    "picture": "https://i.ibb.co.com/LdYWJJ94/andre-russell-of-west-indies-during-the-1st-cg-united-t20-international-match-between-west-indies-an.jpg",
+    "country": "West Indies",
+    "rating": 92,
+    "batting": "Right-Hand-Bat",
+    "price": 91000
+  },
+  {
+    "id": 12,
+    "name": "Hardik Pandya",
+    "picture": "https://i.ibb.co.com/jZHzCRdm/hardik-pandya-of-india-carries-food-during-a-match-between-sri-lanka-vs-india-at-the-rpremadasa-cric.jpg",
+    "country": "India",
+    "rating": 89,
+    "batting": "Right-Hand-Bat",
+    "price": 88000
+  }
+]
