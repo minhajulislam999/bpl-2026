@@ -20,6 +20,14 @@ function App() {
     <>
       <div  className="bg-white min-h-screen">
         <Navbar />
+        <div className='max-w-[1200px] mx-auto flex items-center justify-between mt-10'>
+          <h1 className='text-3xl font-bold text-center mt-10'>Available Players</h1>
+          <div>
+            <button className="btn btn-primary">Available</button>
+            <button className="btn btn-secondary">Selected</button>
+
+          </div>
+        </div>
         <Suspense fallback={<span className="loading loading-spinner text-error"></span>
 }>
           <Available playerPromise={playerPromise} />
