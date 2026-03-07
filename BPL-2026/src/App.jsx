@@ -4,7 +4,7 @@ import './index.css'
 import Navbar from './components/Navbar/Navbar'
 import Available from './components/Available/Available'
 import Selected from './components/Selected/Selected'
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 
 const fetchPlayers = async () => {
   const rest = await  fetch('/data.json')
@@ -14,27 +14,34 @@ const fetchPlayers = async () => {
 
 
 function App() {
+  const [toggle, setToggle] = useState(false);
   const playerPromise = fetchPlayers()
 
   return (
     <>
-      <div  className="bg-white min-h-screen">
+      <div  className = "bg-white min-h-screen">
         <Navbar />
         <div className='max-w-[1200px] mx-auto flex items-center justify-between mt-10'>
-          <h1 className='text-3xl font-bold text-center mt-10'>Available Players</h1>
           <div>
-            <button className="btn btn-primary">Available</button>
-            <button className="btn btn-secondary">Selected</button>
+                      <h1 className='text-3xl font-bold text-center mt-10 text-gray-800'>Available Players</h1>
+
+          </div>
+          <div>
+            <button className="btn  border-radius border-r-none">Available</button>
+            <button className="btn btn-secondary border-radius">Selected</button>
 
           </div>
         </div>
-        <Suspense fallback={<span className="loading loading-spinner text-error"></span>
-}>
+        
+        
+
+        {
+          toggle == true ? <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
           <Available playerPromise={playerPromise} />
-        </Suspense>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Selected />
-        </Suspense>
+        </Suspense> : <Selected />
+        }
+          
+       
        
 
       </div>
