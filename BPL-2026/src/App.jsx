@@ -14,7 +14,7 @@ const fetchPlayers = async () => {
 
 
 function App() {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(true);
   const playerPromise = fetchPlayers()
 
   return (
@@ -27,8 +27,8 @@ function App() {
 
           </div>
           <div>
-            <button className="btn  border-radius border-r-none">Available</button>
-            <button className="btn btn-secondary border-radius">Selected</button>
+            <button onClick={() => setToggle(true)} className="btn  border-radius border-r-none">Available</button>
+            <button onClick={() => setToggle(false)} className="btn btn-secondary border-radius">Selected</button>
 
           </div>
         </div>
