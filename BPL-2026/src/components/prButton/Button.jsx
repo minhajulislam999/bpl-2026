@@ -5,7 +5,7 @@ function Button() {
   return (
     <div>
         <button onClick={() => setLiked(!isLiked)} className="btn tooltip">
-            {isLiked === true ? "Liked  💙 " : "Like ❤️"}
+            {isLiked  ? "Liked  💙 " : "Like ❤️"}
         </button>
     </div>
   )

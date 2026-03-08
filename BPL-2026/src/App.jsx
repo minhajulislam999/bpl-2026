@@ -6,6 +6,7 @@ import Available from './components/Available/Available'
 import Selected from './components/Selected/Selected'
 import { Suspense, useState } from 'react'
 import Button from './components/prButton/Button'
+import ColorBtn from './components/prButton/ColorBtn'
 
 const fetchPlayers = async () => {
   const rest = await  fetch('/data.json')
@@ -44,6 +45,7 @@ function App() {
           
        
        <Button />
+       <ColorBtn />
 
       </div>
      
