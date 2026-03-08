@@ -5,3 +5,10 @@
 শুরুতে লেখা থাকবে "Like ❤️"
 Click করলে হবে "Liked 💙"
 আবার click করলে আবার "Like ❤️"
+।
+
+🧩 Challenge: 3-state Toggle
+
+Button এর text হবে:
+
+"Red" → "Green" → "Blue" → আবার "Red" → ...
