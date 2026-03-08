@@ -5,6 +5,7 @@ import Navbar from './components/Navbar/Navbar'
 import Available from './components/Available/Available'
 import Selected from './components/Selected/Selected'
 import { Suspense, useState } from 'react'
+import Button from './components/prButton/Button'
 
 const fetchPlayers = async () => {
   const rest = await  fetch('/data.json')
@@ -42,7 +43,7 @@ function App() {
         }
           
        
-       
+       <Button />
 
       </div>
      

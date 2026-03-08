@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import namImg from '../../../src/assets/user-1.png'
 import crountryImg from '../../../src/assets/Group.png'
 
+
+
 function PlayersCard({ player }) {
+    const [isSelected, setSelected] = useState(false);
+    const [follow, setFollow] = useState(false);
   return (
     <div className="card bg-base-100 w-96 shadow-sm">
                 <figure>
@@ -31,7 +35,7 @@ function PlayersCard({ player }) {
                         <span>Rating</span>
                         <span>{player.rating}</span>
                     </div>
-                    <div className="flex  justify-between">
+                    <div className = "flex  justify-between">
                         <span>Betting</span>
                         <span>{player.betting}</span>
                     </div>
@@ -40,10 +44,14 @@ function PlayersCard({ player }) {
                         <span>{player.price}</span>
                     </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Choose Now</button>
+                        <button onClick={()=> setSelected(true)} className="btn btn-primary">{isSelected === true ? "Selected" : 'Choose Player'}</button>
                     </div>
                 </div>
+                <button onClick={()=> setFollow(!follow)}  className = "btn btn-outline">{follow === true ? "following" : "follow" }</button>
             </div> 
+    
+
+    
   )
 }
 
