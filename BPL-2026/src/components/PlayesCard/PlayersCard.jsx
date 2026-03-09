@@ -46,6 +46,10 @@ function PlayersCard({ player, setAvailableBalance, availableBalance }) {
                     <div className="card-actions justify-end">
                         <button disabled={isSelected} onClick={()=> {
                             setSelected(!isSelected);
+                            if(availableBalance < player.price) {
+                                alert("You don't have enough balance to select this player.");
+                                return;
+                            }
                             setAvailableBalance(availableBalance - player.price);
                         }}  className="btn btn-primary">{isSelected === true ? "Selected" : 'Choose Player'}</button>
                     </div>
