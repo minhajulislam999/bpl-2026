@@ -44,10 +44,10 @@ function PlayersCard({ player }) {
                         <span>{player.price}</span>
                     </div>
                     <div className="card-actions justify-end">
-                        <button onClick={()=> setSelected(true)} className="btn btn-primary">{isSelected === true ? "Selected" : 'Choose Player'}</button>
+                        <button disabled={isSelected} onClick={()=> setSelected(!isSelected)} className="btn btn-primary">{isSelected === true ? "Selected" : 'Choose Player'}</button>
                     </div>
                 </div>
-                <button onClick={()=> setFollow(!follow)}  className = "btn btn-outline">{follow === true ? "following" : "follow" }</button>
+                {/* <button onClick={()=> setFollow(!follow)}  className = "btn btn-outline">{follow === true ? "following" : "follow" }</button> */}
             </div> 
     
 
