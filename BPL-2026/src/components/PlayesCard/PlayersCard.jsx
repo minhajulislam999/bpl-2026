@@ -4,7 +4,7 @@ import crountryImg from '../../../src/assets/Group.png'
 
 
 
-function PlayersCard({ player }) {
+function PlayersCard({ player, setAvailableBalance, availableBalance }) {
     const [isSelected, setSelected] = useState(false);
     const [follow, setFollow] = useState(false);
   return (
@@ -44,7 +44,10 @@ function PlayersCard({ player }) {
                         <span>{player.price}</span>
                     </div>
                     <div className="card-actions justify-end">
-                        <button disabled={isSelected} onClick={()=> setSelected(!isSelected)} className="btn btn-primary">{isSelected === true ? "Selected" : 'Choose Player'}</button>
+                        <button disabled={isSelected} onClick={()=> {
+                            setSelected(!isSelected);
+                            setAvailableBalance(availableBalance - player.price);
+                        }}  className="btn btn-primary">{isSelected === true ? "Selected" : 'Choose Player'}</button>
                     </div>
                 </div>
                 {/* <button onClick={()=> setFollow(!follow)}  className = "btn btn-outline">{follow === true ? "following" : "follow" }</button> */}

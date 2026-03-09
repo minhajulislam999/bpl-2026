@@ -7,7 +7,7 @@ import PlayersCard from '../PlayesCard/PlayersCard';
 
 
 
-function Available({ playerPromise }) {
+function Available({ playerPromise, setAvailableBalance, availableBalance }) {
 
     const playerData = use(playerPromise);
     console.log(playerData);
@@ -15,7 +15,7 @@ function Available({ playerPromise }) {
         <div className='max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10'>
 
             {
-                playerData.map(player => <PlayersCard key={player.id} player={player} />)
+                playerData.map(player => <PlayersCard availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} key={player.id} player={player} />)
             }
            
         </div>
