@@ -19,6 +19,8 @@ function App() {
   const [toggle, setToggle] = useState(true);
   const playerPromise = fetchPlayers()
   const [availableBalance, setAvailableBalance] = useState(600000);
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+  // console.log("Selected Players:", selectedPlayers);
 
   return (
     <>
@@ -40,8 +42,8 @@ function App() {
 
         {
           toggle == true ? <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
-          <Available availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
-        </Suspense> : <Selected />
+          <Available selectedPlayers={selectedPlayers}  setSelectedPlayers={setSelectedPlayers} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
+        </Suspense> : <Selected selectedPlayers={selectedPlayers} />
         }
           
 {/*        
