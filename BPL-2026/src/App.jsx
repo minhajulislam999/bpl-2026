@@ -7,6 +7,7 @@ import Selected from './components/Selected/Selected'
 import { Suspense, useState } from 'react'
 import Button from './components/prButton/Button'
 import ColorBtn from './components/prButton/ColorBtn'
+// import Tasbih from './components/tasbih/Tasbih'
 
 const fetchPlayers = async () => {
   const rest = await  fetch('/data.json')
@@ -28,12 +29,12 @@ function App() {
         <Navbar availableBalance={availableBalance} />
         <div className='max-w-[1200px] mx-auto flex items-center justify-between mt-10'>
           <div>
-                      <h1 className='text-3xl font-bold text-center mt-10 text-gray-800'>Available Players</h1>
+          <h1 className='text-3xl font-bold text-center mt-10 text-gray-800'>{toggle ? 'Available Players' : `Selected Players (${selectedPlayers.length})`}</h1>
 
           </div>
           <div>
             <button onClick={() => setToggle(true)} className={` btn  border-radius border-r-none ${toggle === true ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}>Available</button>
-            <button onClick={() => setToggle(false)} className={`btn  border-radius border-r-none ${toggle === false ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}>Selected</button>
+            <button onClick={() => setToggle(false)} className={`btn  border-radius border-r-none ${toggle === false ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-800'}`}>selected{selectedPlayers.length}</button>
 
           </div>
         </div>
@@ -43,7 +44,7 @@ function App() {
         {
           toggle == true ? <Suspense fallback={<span className="loading loading-spinner text-error"></span>}>
           <Available selectedPlayers={selectedPlayers}  setSelectedPlayers={setSelectedPlayers} availableBalance={availableBalance} setAvailableBalance={setAvailableBalance} playerPromise={playerPromise} />
-        </Suspense> : <Selected selectedPlayers={selectedPlayers} />
+        </Suspense> : <Selected selectedPlayers={selectedPlayers} setSelectedPlayers={setSelectedPlayers} setAvailableBalance={setAvailableBalance} />
         }
           
 {/*        
@@ -51,6 +52,8 @@ function App() {
        <ColorBtn /> */}
 
       </div>
+
+       
      
     </>
   )
